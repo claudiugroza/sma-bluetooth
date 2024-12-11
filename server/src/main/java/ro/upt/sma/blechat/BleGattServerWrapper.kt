@@ -1,5 +1,6 @@
 package ro.upt.sma.blechat
 
+import android.annotation.SuppressLint
 import android.content.Context.BLUETOOTH_SERVICE
 
 import android.bluetooth.BluetoothAdapter
@@ -32,6 +33,7 @@ import java.util.HashSet
  * https://github.com/androidthings/sample-bluetooth-le-gattserver
  */
 
+@SuppressLint("MissingPermission")
 class BleGattServerWrapper(private val context: Context) {
 
     private var chatListener: ChatListener? = null

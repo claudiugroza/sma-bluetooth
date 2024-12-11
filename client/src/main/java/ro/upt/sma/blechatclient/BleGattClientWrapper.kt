@@ -1,5 +1,6 @@
 package ro.upt.sma.blechatclient
 
+import android.annotation.SuppressLint
 import android.bluetooth.*
 import android.bluetooth.BluetoothAdapter.STATE_CONNECTED
 import android.bluetooth.le.ScanCallback
@@ -9,6 +10,7 @@ import android.content.Context.BLUETOOTH_SERVICE
 import java.nio.charset.Charset
 import java.util.*
 
+@SuppressLint("MissingPermission")
 class BleGattClientWrapper(private val context: Context) {
 
     private val bluetoothManager: BluetoothManager = context.getSystemService(BLUETOOTH_SERVICE) as BluetoothManager
